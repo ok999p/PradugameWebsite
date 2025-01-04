@@ -2,10 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: #000000;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 
@@ -21,24 +19,22 @@ body {
     z-index: 9999;
 }
 
-#preloader-svg {
-    width: 100px;
-    height: 100px;
-    transition: stroke 0.5s ease;
-}
 
 
 .load {
+    background-image: url(../img/BG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
     display: flex;
-    border-radius: 50%;
     flex-direction: row;
 }
 
 .progress {
     scale: 0;
     border-radius: 50%;
-    animation: loading_492 3.5s ease infinite;
-    animation-delay: 1s;
+    animation: loading_492 2s ease infinite; /* ลดระยะเวลา */
 }
 
 @keyframes loading_492 {
@@ -47,21 +43,26 @@ body {
     }
 }
 
-
+.progress:nth-child(1) {
+    animation-delay: 0.1s; /* ลดระยะเวลา delay */
+}
 .progress:nth-child(2) {
-    animation-delay: 1.3s;
+    animation-delay: 0.3s; /* ลดระยะเวลา delay */
 }
 
 .progress:nth-child(3) {
-    animation-delay: 1.7s;
+    animation-delay: 0.5s;
 }
 
 .progress:nth-child(4) {
-    animation-delay: 2.1s;
+    animation-delay: 0.7s;
 }
+
 .progress:nth-child(5) {
-    animation-delay: 2.5s;
+    animation-delay: 0.9s;
 }
+
 .progress:nth-child(6) {
-    animation-delay: 2.9s;
+    animation-delay: 1.1s;
 }
+
